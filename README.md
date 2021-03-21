@@ -1,3 +1,3 @@
 # html-css
-# Landing page for coffee shop;
+# Three page website for coffee shop;
 # Technologies used : HTML and CSS;
