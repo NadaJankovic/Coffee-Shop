@@ -93,37 +93,23 @@ footer {
     margin:auto;
     align-items:center;
     justify-content: center;
-    height: 10vh;
 }
 .contact-container {
     display: flex;
-    width: 70%;
+    flex-direction: column;
+    width: max-content;
     margin: auto;
-}
-.contact-section {
-    flex:1;
-    min-width: fit-content ;
-    height: 60vh;
-    margin-top: 5vh;
+    min-height: max-content;
     border-radius: 4%;
-    align-items: center;
-    background: #927359;
+    background: linear-gradient(to right ,#775d47,#927359,#e2cab3);
+    -webkit-background-clip: border-box;
+    background-clip:border-box;
     box-shadow: 10px 10px 10px gray;
+    padding-left: 2vw;
 }
-.contact-img {
-    flex: 1;
-    min-height: 70vh;
-}
-.contact-img-content {
-    height: 60vh;
-    width: 40vw;
-    margin-top: 5vh;
-    border-radius: 4%;
-    align-items: center;
-    animation: slide 1.5s ease;
-}
+
 .main-contact-info{
-    padding-left: 20px;
+    flex: 1;
 }
 .main-contact-info h1 {
     font-size: 30px;
@@ -148,15 +134,16 @@ footer {
 .contact-text :hover {
     color: #e2cab3;
 }
+.social-media-container {
+    flex: 1;
+}
 .social-media-icons {
-    display: inline-flex;
-    padding-top: 20px;
+    display: flex;
     list-style-type: none;
     animation: up 1.5s ease;
 }
 .social-media-icon { 
-    padding-left: 20px;
-    padding-right:10px;
+    margin: 10px;
     font-size:36px;
     color: black;
     text-decoration: none;
@@ -165,6 +152,20 @@ footer {
 .social-media-icon :hover {
     color:#e2cab3;
     transform: scale(1.5) rotate(20deg)
+}
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column{
+    flex: 33%;
+    max-width: 30%;
+    padding: 4px;
+}
+.column img {
+    margin-top: 8px;
+    width: 100%;
 }
 
 @keyframes up {
@@ -202,6 +203,13 @@ footer {
        margin-top: 5vh;
    }
 }
+@media screen and (max-width:850px){
+    .column {
+        flex: 50%;
+        max-width: 48%;
+        padding: 8px;
+    }
+}
 @media screen and (max-width:650px) {
    header {
         flex-direction: column;
@@ -228,6 +236,11 @@ footer {
     .nav-link{
         padding-right: 25px;
     }
+    .column {
+        flex: 100%;
+        max-width: 98%;
+        padding: 8px;
+    }
 }
 @media screen and (max-width :396px){
     .nav-link{
@@ -235,24 +248,4 @@ footer {
         font-size: 17px;
     }
 }
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-.column{
-    flex: 50%;
-    max-width: 48%;
-    padding: 4px;
-}
-.column img {
-    margin-top: 8px;
-    width: 100%;
-}
-@media screen and (max-width:800px){
-    .column {
-        flex: 100%;
-        max-width: 100%;
-        padding: 8px;
-    }
-}
+
