@@ -87,7 +87,6 @@ nav {
 }
 footer {
     display: flex;
-    flex-direction: column;
     width:70%;
     height: 20vh;
     margin:auto;
@@ -97,7 +96,8 @@ footer {
 .contact-container {
     display: flex;
     flex-direction: column;
-    width: max-content;
+    width:50vh;
+    min-width: auto;
     margin: auto;
     min-height: max-content;
     border-radius: 4%;
@@ -166,6 +166,13 @@ footer {
 .column img {
     margin-top: 8px;
     width: 100%;
+    box-shadow: 10px 10px 10px gray ;
+    transition: 0.1s ease-in;
+}
+.column img:hover {
+transform:scale(1.2);
+box-shadow: 10px 10px 10px gray ;
+border-radius: 2%;
 }
 
 @keyframes up {
